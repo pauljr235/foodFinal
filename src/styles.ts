@@ -23,6 +23,12 @@ export const GlobalCSS = createGlobalStyle`
   list-style: none;
 }
 
+  .container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
 body{
   background-color: ${cores.palhaClara};
   color: ${cores.vermelho};

@@ -1,19 +1,19 @@
-import styled from 'styled-components'
-import { cores } from '../../styles'
-import { Link } from 'react-router-dom'
+import styled from "styled-components";
+import { cores } from "../../styles";
+import { Link } from "react-router-dom";
 
-import { Props } from '.'
+export const ButtonContainer = styled.button`
+    padding: 4px 6px;
+    background-color: ${cores.rosa};
+    color: ${cores.vermelho}:
+    font-size: 14px;
+    font-weight: 700;
+`
 
-export const BotaoContainer = styled(Link)<Props>`
-  background-color: ${cores.vermelho};
-  color: ${cores.rosa};
-  text-decoration: none;
-  font-size: ${(props) => (props.type === 'link' ? '14px' : '12px')};
-  cursor: ${(props) => (props.type === 'link' ? 'pointer' : 'default')};
-  margin-top: 16px;
-  margin-bottom: 8px;
-  margin-left: 8px;
-  padding: 6px 4px;
-  font-weight: bold;
-  display: inline-block;
+export const ButtonLink = styled(Link)`
+    padding: 4px 6px;
+    background-color: ${cores.vermelho};
+    color: ${cores.rosa}:
+    font-size: 14px;
+    font-weight: 700;
 `

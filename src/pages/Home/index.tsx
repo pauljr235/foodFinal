@@ -1,21 +1,13 @@
-import Footer from '../../components/Footer'
-import Hero from '../../components/Hero'
-import Loader from '../../components/Loader'
-import RestaurantList from '../../components/RestaurantList'
-import { useGetRestaurantsQuery } from '../../services/api'
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+import RestaurantsList from "../../components/RestaurantsList"
 
-const Home = () => {
-  const { data: restaurants } = useGetRestaurantsQuery()
+const Home = () => (
+    <>
+    <Header />
+    <RestaurantsList/>
+    <Footer />
+    </>
+)
 
-  if (restaurants) {
-    return (
-      <>
-        <Hero />
-        <RestaurantList restaurants={restaurants} />
-        <Footer />
-      </>
-    )
-  }
-  return <Loader />
-}
 export default Home
