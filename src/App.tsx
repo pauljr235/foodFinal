@@ -4,16 +4,15 @@ import Home from './pages/Home'
 
 const Rotas = () => (
   <Routes>
-    <Route path='/' element={<Home/>} />
+    <Route path="/" element={<Home />} />
   </Routes>
 )
-
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalCSS />
-      <Rotas/>
+      <Rotas />
     </BrowserRouter>
   )
 }

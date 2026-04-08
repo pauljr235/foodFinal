@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { cores } from "../../styles";
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { cores } from '../../styles'
+import { Link } from 'react-router-dom'
 
 export const ButtonContainer = styled.button`
     padding: 4px 6px;
@@ -11,9 +11,10 @@ export const ButtonContainer = styled.button`
 `
 
 export const ButtonLink = styled(Link)`
-    padding: 4px 6px;
-    background-color: ${cores.vermelho};
-    color: ${cores.rosa}:
-    font-size: 14px;
-    font-weight: 700;
+  padding: 4px 6px;
+  background-color: ${cores.vermelho};
+  color: ${cores.rosa};
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
 `

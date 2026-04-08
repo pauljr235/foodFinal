@@ -1,32 +1,41 @@
 import estrela from '../../assets/estrela.png'
-import { Card } from './styles'
+import { Card, CardInfo, Description, Ratings, Title } from './styles'
 import { ButtonLink } from '../Button/styles'
 import Tag from '../Tag'
+import { TagContainer } from '../Tag/styles'
 
 type Props = {
-    image: string
-    title: string
-    rating: string
-    description: string
-
+  image: string
+  title: string
+  rating: string
+  description: string
+  infos: string[]
 }
 
-const Restaurant = ({ image, title, rating, description }: Props) => (
-    <div className='container'>
-        <Card>
-            <img src={image} alt="" />
-            <div>
-                <h4>{title}</h4>
-                <div>
-                    <p>{rating}</p>
-                    <img src={estrela} alt="Imagem estrela" />
-                </div>
-                <p>{description}</p>
-                <ButtonLink to={'/'} type='link'>Saiba mais</ButtonLink>
-            </div>
-        </Card>
-
-    </div>
+const Restaurant = ({ image, title, rating, description, infos }: Props) => (
+  <div className="container">
+    <Card>
+      <div>
+        {infos.map((info) => (
+          <Tag key={info}>{info}</Tag>
+        ))}
+      </div>
+      <img style={{ maxHeight: '217px', width: '417px' }} src={image} alt="" />
+      <CardInfo>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <Title>{title}</Title>
+          <Ratings>
+            <p>{rating}</p>
+            <img src={estrela} alt="Imagem estrela" />
+          </Ratings>
+        </div>
+        <Description>{description}</Description>
+        <ButtonLink to={'/'} type="link">
+          Saiba mais
+        </ButtonLink>
+      </CardInfo>
+    </Card>
+  </div>
 )
 
 export default Restaurant
