@@ -8,17 +8,12 @@ export const Card = styled.div`
   max-width: 417px;
   width: 100%;
   position: relative;
-
-  ${TagContainer} {
-    display: flex;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  }
 `
 
 export const CardInfo = styled.div`
   padding: 8px;
+  border: 1px solid red;
+  border-top: none;
 `
 
 export const Title = styled.h4`
@@ -48,4 +43,11 @@ export const Description = styled.p`
   font-weight: 400;
   line-height: 22px;
   color: ${cores.vermelho};
+`
+export const TagsWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
 `

@@ -1,5 +1,12 @@
 import estrela from '../../assets/estrela.png'
-import { Card, CardInfo, Description, Ratings, Title } from './styles'
+import {
+  Card,
+  CardInfo,
+  Description,
+  Ratings,
+  TagsWrapper,
+  Title
+} from './styles'
 import { ButtonLink } from '../Button/styles'
 import Tag from '../Tag'
 import { TagContainer } from '../Tag/styles'
@@ -15,11 +22,11 @@ type Props = {
 const Restaurant = ({ image, title, rating, description, infos }: Props) => (
   <div className="container">
     <Card>
-      <div>
+      <TagsWrapper>
         {infos.map((info) => (
           <Tag key={info}>{info}</Tag>
         ))}
-      </div>
+      </TagsWrapper>
       <img style={{ maxHeight: '217px', width: '417px' }} src={image} alt="" />
       <CardInfo>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -30,7 +37,7 @@ const Restaurant = ({ image, title, rating, description, infos }: Props) => (
           </Ratings>
         </div>
         <Description>{description}</Description>
-        <ButtonLink to={'/'} type="link">
+        <ButtonLink to={'/perfil'} type="link">
           Saiba mais
         </ButtonLink>
       </CardInfo>
